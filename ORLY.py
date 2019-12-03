@@ -15,12 +15,15 @@ def computer():
 
 def player():
     choice = input("Wybierz orła (O) lub Reszkę (R)")
+    while choice not in ("O", "R"):
+        choice = input("Wybierz orła (O) lub Reszkę (R)")
+
     if choice == "O":
         choice = 1
     elif choice == "R":
         choice = 2
     else:
-        print("Błąd!")
+        print("Wybierz O lub R!")
     return choice
 
 #main
